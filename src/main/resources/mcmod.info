@@ -1,0 +1,11 @@
+[
+{
+  "modid": "antishuffle",
+  "name": "Anti-Shuffle",
+  "description": "See the names of obfuscated queues.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "authorList": ["StarbuckBarista"],
+  "credits": "The Coffee Man, StarbuckBarista"
+}
+]
