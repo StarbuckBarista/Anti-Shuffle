@@ -15,14 +15,12 @@ public class JoinEvent {
 
             if (clientChatReceivedEvent.message.getFormattedText().contains(String.valueOf(EnumChatFormatting.OBFUSCATED))) {
 
-                clientChatReceivedEvent.setCanceled(true);
-
                 String unformattedText = clientChatReceivedEvent.message.getUnformattedText();
                 String formattedText = clientChatReceivedEvent.message.getFormattedText();
                 String username = EnumChatFormatting.GRAY + unformattedText.substring(0, unformattedText.indexOf(" has joined "));
                 String ending = EnumChatFormatting.YELLOW + formattedText.substring(formattedText.indexOf(" has joined "));
 
-                Minecraft.getMinecraft().thePlayer.addChatComponentMessage(new ChatComponentText(username + ending));
+                clientChatReceivedEvent.message = new ChatComponentText(username + ending);
             }
         }
     }
